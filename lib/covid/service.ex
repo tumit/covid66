@@ -1,9 +1,9 @@
 defmodule Covid.Service do
-    alias Covid.Virus.Bean
+    alias Covid.Virus.Entity
     alias Covid.Repo
 
     def list_viruses do
-        Bean |> Repo.all
+        Entity |> Repo.all
         # [
         #     %Bean{code: "001", name: "covid 19"},
         #     %Bean{code: "002", name: "covid 20"},
@@ -12,6 +12,6 @@ defmodule Covid.Service do
     end
 
     def get_virus_by_code(code) do
-        Bean |> Repo.get_by(code: code)
+        Entity |> Repo.get_by(code: code)
     end
 end

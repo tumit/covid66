@@ -1,4 +1,4 @@
-defmodule Covid.Virus.Bean do
+defmodule Covid.Virus.Entity do
     # defstruct [:code, :name, :description]
     use Ecto.Schema
     import Ecto.Changeset
