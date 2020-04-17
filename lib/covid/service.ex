@@ -10,6 +10,7 @@ defmodule Covid.Service do
     end
 
     def get_virus_by_code(code) do
-        Enum.find(list_viruses, fn v -> v.code == code end)
+        viruses = list_viruses
+        Enum.find(viruses, fn v -> v.code == code end)
     end
 end
