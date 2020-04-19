@@ -1,5 +1,27 @@
-<h1>Listing Viruses</h1>
+<h1>CreateNew Viruse</h1>
 
+<%= form_for @changeset, Routes.virus_path(@conn, :create), fn f -> %>
+  <div class="form-group">
+    <%= label f, :code, class: "control-label" %>
+    <%= text_input f, :code, class: "form-control" %>
+    <%= error_tag f, :code %>
+
+    <%= label f, :name, class: "control-label" %>
+    <%= text_input f, :name, class: "form-control" %>
+    <%= error_tag f, :name %>
+
+    <%= label f, :description, class: "control-label" %>
+    <%= text_input f, :description, class: "form-control" %>
+    <%= error_tag f, :description %>
+    
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<h1>Listing Viruses</h1>
 <table>
     <%= for virus <- @viruses do %>
     <tr>

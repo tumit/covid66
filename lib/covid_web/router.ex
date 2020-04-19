@@ -19,6 +19,7 @@ defmodule CovidWeb.Router do
     get "/", VirusController, :index
     get "/viruses", VirusController, :index
     get "/viruses/:code", VirusController, :show
+    post "/viruses", VirusController, :create
   end
 
   # Other scopes may use custom stacks.

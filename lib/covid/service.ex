@@ -14,4 +14,5 @@ defmodule Covid.Service do
     def get_virus_by_code(code) do
         Entity |> Repo.get_by(code: code)
     end
+
 end
